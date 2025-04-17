@@ -38,7 +38,12 @@ export const certificates = defineType({
         defineField({
             name:'institute',
             type:'string',
-            title: 'Training Institute'
+            title: 'Training Institute Name'
+        }),
+        defineField({
+            name:'address',
+            type:'string',
+            title: 'Training Institute Address'
         }),
         defineField({
             name:'from',

@@ -1,0 +1,60 @@
+[
+  {
+    "fields": [
+      {
+        "name": "serial",
+        "type": "string",
+        "title": "Serial No"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "district",
+        "type": "string",
+        "title": "district"
+      },
+      {
+        "name": "udyam",
+        "type": "string",
+        "title": "Udyam No"
+      },
+      {
+        "name": "days",
+        "type": "string",
+        "title": "No of days"
+      },
+      {
+        "name": "training",
+        "type": "string",
+        "title": "Training on"
+      },
+      {
+        "name": "institute",
+        "type": "string",
+        "title": "Training Institute Name"
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "title": "Training Institute Address"
+      },
+      {
+        "name": "from",
+        "type": "string",
+        "title": "from"
+      },
+      {
+        "name": "to",
+        "type": "string"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      }
+    ],
+    "name": "certificates",
+    "type": "document"
+  }
+]
