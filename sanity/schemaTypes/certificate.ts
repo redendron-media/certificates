@@ -48,7 +48,7 @@ export const certificates = defineType({
         defineField({
             name:'from',
             type:'string',
-            title: 'from'
+            title: 'From'
         }),
         defineField({
             name:'to',

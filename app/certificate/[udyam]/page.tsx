@@ -16,12 +16,13 @@ const fetchCertificateData = async (udyam: string) => {
     *[_type == "certificates" && udyam == $udyam][0]{
       name,
       training,
+      district,
       udyam,
       serial,
-      noOfDays,
-      trainingInstituteName,
-      trainingInstituteAddress,
-      from,
+      days,
+      institute,
+      address,
+     from,
       to
     }
   `;
@@ -49,18 +50,19 @@ const CertificatePage = async ({ params }: Props) => {
 
         <p className="mb-4 text-lg">This certifies that:</p>
         <p className="text-2xl font-semibold mb-6">{certificate.name}</p>
-
+        <p className="mb-4 text-lg">From</p>
+        <p className="mb-4 text-lg">{certificate.district}</p>
         <p className="mb-4 text-lg">Has successfully completed:</p>
         <p className="text-xl mb-6">{certificate.training}</p>
 
         <p className="mb-2 text-sm text-gray-500">Udyam No: {certificate.udyam}</p>
         <p className="mb-2 text-sm text-gray-500">Serial No: {certificate.serial}</p>
-        <p className="text-sm text-gray-500">Duration: {certificate.noOfDays} Days</p>
+        <p className="text-sm text-gray-500">Duration: {certificate.days} Days</p>
         <p className="text-sm text-gray-500">
-          Conducted by: {certificate.trainingInstituteName}
+          Conducted by: {certificate.institute}
         </p>
         <p className="text-sm text-gray-500">
-          Address: {certificate.trainingInstituteAddress}
+          Address: {certificate.address}
         </p>
 
         <div className="mt-10 border-t pt-4 text-sm text-gray-400 text-center">
