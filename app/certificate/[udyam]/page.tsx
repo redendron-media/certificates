@@ -44,32 +44,53 @@ const CertificatePage = async ({ params }: Props) => {
   if (!certificate) return notFound();
 
   return (
-    <main className="min-h-screen px-6 py-12 bg-white text-black">
-      <section className="max-w-2xl mx-auto border border-gray-300 p-10 rounded-xl shadow-lg">
-        <h1 className="text-3xl font-bold mb-6 text-center">Certificate of Completion</h1>
-
-        <p className="mb-4 text-lg">This certifies that:</p>
-        <p className="text-2xl font-semibold mb-6">{certificate.name}</p>
-        <p className="mb-4 text-lg">From</p>
-        <p className="mb-4 text-lg">{certificate.district}</p>
-        <p className="mb-4 text-lg">Has successfully completed:</p>
-        <p className="text-xl mb-6">{certificate.training}</p>
-
-        <p className="mb-2 text-sm text-gray-500">Udyam No: {certificate.udyam}</p>
-        <p className="mb-2 text-sm text-gray-500">Serial No: {certificate.serial}</p>
-        <p className="text-sm text-gray-500">Duration: {certificate.days} Days</p>
-        <p className="text-sm text-gray-500">
-          Conducted by: {certificate.institute}
+    <main className="min-h-screen flex items-center justify-center bg-white py-12 px-6">
+    <section className="bg-white w-full max-w-3xl border-4 border-black p-10 rounded-xl shadow-xl font-serif text-gray-900">
+      <h1 className="text-4xl font-bold mb-2 text-center uppercase tracking-widest text-black">
+        Certificate of Completion
+      </h1>
+  
+      <p className="text-center text-lg italic mb-8 text-gray-800">
+        This is proudly presented to
+      </p>
+  
+      <h2 className="text-3xl font-bold text-center mb-2  text-black">
+        {certificate.name}
+      </h2>
+  
+      <p className="text-center text-lg mb-6 text-gray-900">
+        from <span className="font-semibold">{certificate.district}</span>
+      </p>
+  
+      <p className="text-center text-lg mb-4 text-gray-800">
+        for successfully completing the training on
+      </p>
+  
+      <h3 className="text-2xl text-center font-semibold mb-2 text-black">
+        {certificate.training}
+      </h3>
+  
+      <div className="text-center mb-6">
+        <p className="text-lg font-semibold text-black">
+          Duration: {certificate.days} Days
         </p>
-        <p className="text-sm text-gray-500">
-          Address: {certificate.address}
+        <p className="text-sm text-gray-800">
+          From {certificate.from} to {certificate.to}
         </p>
-
-        <div className="mt-10 border-t pt-4 text-sm text-gray-400 text-center">
-          Issued on: {certificate.from} – {certificate.to}
-        </div>
-      </section>
-    </main>
+      </div>
+  
+      <div className="text-center mb-6">
+        <p className="text-sm text-gray-800">Conducted by:</p>
+        <p className="font-medium text-black">{certificate.institute}</p>
+        <p className="text-sm text-gray-800">{certificate.address}</p>
+      </div>
+  
+      <div className="text-center text-sm text-gray-800 mb-4">
+        <p>Udyam No: {certificate.udyam}</p>
+        <p>Serial No: {certificate.serial}</p>
+      </div>
+    </section>
+  </main>  
   );
 };
 
